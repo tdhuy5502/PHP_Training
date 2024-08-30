@@ -5,14 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Posts extends Model
+class Video extends Model
 {
     use HasFactory;
 
-    public function images()
-    {
-        return $this->morphOne('App\Models\Images','imageable');
-    }
+    protected $table = 'videos';
 
     public function comments()
     {
